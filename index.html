@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saylani Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-bar">
+            <img src="IMG-20250502-WA0023.jpg" alt="Aghaaz Tech Logo" class="logo-icon" style="width: 250px; height: 100px; margin-left: 280px; margin-bottom: 0;">
+            <div class="social-icons" style="text-align: start; margin-top: 0px; margin-left: 20px;">
+                <a href="https://www.facebook.com/p/Aaghaaz-Tech-61565650506702/" target="_blank" class="social-icon" style="background: #4267B2; color: #fff; font-size: 18px; border-radius: 50%; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/aaghaaz-tech/?originalSubdomain=pk" target="_blank" class="social-icon" style="background: #0077b5; color: #fff; font-size: 18px; border-radius: 50%; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/@CodeWithKashan" target="_blank" class="social-icon" style="background: #FF0000; color: #fff; font-size: 18px; border-radius: 50%; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="logo-text">
+            </div>
+        </div>
+        <h2 style="margin-top: 0;">Registration Form - AT</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Select country</label>
+                    <select id="country" onchange="updateCities()">
+                        <option value="">Select your country</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="India">India</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="United States">United States</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Select city</label>
+                    <select id="city">
+                        <option value="">Select your city</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Select course or event</label>
+                    <select>
+                        <option>Select course or event</option>
+                        <option>Web & App Development</option>
+                        <option>Graphic Designing</option>
+                        <option>UI UX Designing</option>
+                        <option>Digital Marketing</option>
+                        <option>Video Editing</option>
+                        <option>Generative AI & Chatbot</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Select your computer proficiency</label>
+                    <select>
+                        <option>Select your computer proficiency</option>
+                        <option>Beginner</option>
+                        <option>Intermidiate</option>
+                        <option>Masters</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full name</label>
+                    <input type="text" placeholder="Full name">
+                </div>
+                <div class="form-group">
+                    <label>Father name</label>
+                    <input type="text" placeholder="Father name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" placeholder="Phone">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>CNIC</label>
+                    <input type="text" placeholder="CNIC">
+                </div>
+                <div class="form-group">
+                    <label>Father's CNIC (optional)</label>
+                    <input type="text" placeholder="Father's CNIC (optional)">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Date of birth</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>Select gender</label>
+                    <select>
+                        <option>Select gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" placeholder="Address">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Last qualification</label>
+                    <select>
+                        <option>Last qualification</option>
+                        <option>Matric</option>
+                        <option>Inter</option>
+                        <option>Graduate</option>
+                        <option>Masters</option>
+                        <option>M Phil</option>
+                        <option>PHD</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Do you have a Laptop?</label>
+                    <select>
+                        <option>Do you have a Laptop?</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row" style="margin-bottom: 18px;">
+                <div class="form-group">
+                    <label>Picture</label>
+                    <input type="file">
+                </div>
+            </div>
+            <div class="instructions" style="font-size: 12px; color: #555; margin-bottom: 10px; margin-top: 18px;">
+                <ol style="padding-left: 18px;">
+                    <li>I hereby, solemnly declare that the data and facts mentioned herein are true and correct to the best of my knowledge. Further, I will abide by all the established and future regulations and policies of SMIT.</li>
+                    <li>I hereby accept the responsibilities of good conduct and guarantee that I will not be involved in any other activity, political or otherwise, but learning during my stay in the program.</li>
+                    <li>Defiance will render my admission canceled at any point in time.</li>
+                    <li>Upon completion, of the course, I will complete the required project by SMIT.</li>
+                    <li>It is mandatory for female students to wear abaya/hijab in the class.</li>
+                </ol>
+            </div>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    <script>
+        function updateCities() {
+            const country = document.getElementById('country').value;
+            const citySelect = document.getElementById('city');
+            let cities = [];
+            if (country === 'Pakistan') {
+                cities = ['Karachi', 'Lahore', 'Islamabad', 'Kashmir', 'Hyderabad', 'Multan', 'Quetta', 'Balochistan', 'Panjab'];
+            } else if (country === 'India') {
+                cities = ['Mumbai', 'Uttarkand', 'New Delhi', 'Bangalore', 'Pune', 'Chennai', 'Ahmedabad'];
+            } else if (country === 'Bangladesh') {
+                cities = ['Chittagong', 'Rajshahi', 'Bogra', 'Tangail', 'Jamalpur', 'Dhaka'];
+            } else if (country === 'Afghanistan') {
+                cities = ['Kabul', 'Herat', 'Jalalabad', 'Kandahar', 'Mazar-i-Sharif'];
+            } else if (country === 'United States') {
+                cities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia'];
+            } else if (country === 'Turkey') {
+                cities = ['Istanbul', 'Ankara', 'Izmir', 'Bursa', 'Adana', 'Gaziantep'];
+            }
+            citySelect.innerHTML = '<option value="">Select your city</option>';
+            cities.forEach(function(city) {
+                const option = document.createElement('option');
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+            });
+        }
+    </script>
+</body>
+</html>
