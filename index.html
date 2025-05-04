@@ -12,11 +12,9 @@
         <div class="logo-bar">
             <img src="IMG-20250502-WA0023.jpg" alt="Aghaaz Tech Logo" class="logo-icon" style="width: 250px; height: 100px; margin-left: 280px; margin-bottom: 0;">
             <div class="social-icons" style="text-align: start; margin-top: 0px; margin-left: 20px;">
-                <a href="https://www.facebook.com/p/Aaghaaz-Tech-61565650506702/" target="_blank" class="social-icon" style="background: #4267B2; color: #fff; font-size: 18px; border-radius: 50%; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/company/aaghaaz-tech/?originalSubdomain=pk" target="_blank" class="social-icon" style="background: #0077b5; color: #fff; font-size: 18px; border-radius: 50%; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/@CodeWithKashan" target="_blank" class="social-icon" style="background: #FF0000; color: #fff; font-size: 18px; border-radius: 50%; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;"><i class="fab fa-youtube"></i></a>
-            </div>
-            <div class="logo-text">
+                <a href="https://www.facebook.com/p/Aaghaaz-Tech-61565650506702/" target="_blank" class="social-icon" style="background: #4267B2; color: #fff;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/aaghaaz-tech/?originalSubdomain=pk" target="_blank" class="social-icon" style="background: #0077b5; color: #fff;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/@CodeWithKashan" target="_blank" class="social-icon" style="background: #FF0000; color: #fff;"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
         <h2 style="margin-top: 0;">Registration Form - AT</h2>
@@ -44,7 +42,7 @@
             <div class="form-row">
                 <div class="form-group">
                     <label>Select course or event</label>
-                    <select>
+                    <select id="course">
                         <option>Select course or event</option>
                         <option>Web & App Development</option>
                         <option>Graphic Designing</option>
@@ -56,7 +54,7 @@
                 </div>
                 <div class="form-group">
                     <label>Select your computer proficiency</label>
-                    <select>
+                    <select id="proficiency">
                         <option>Select your computer proficiency</option>
                         <option>Beginner</option>
                         <option>Intermidiate</option>
@@ -67,41 +65,41 @@
             <div class="form-row">
                 <div class="form-group">
                     <label>Full name</label>
-                    <input type="text" placeholder="Full name">
+                    <input type="text" placeholder="Full name" id="fullname">
                 </div>
                 <div class="form-group">
                     <label>Father name</label>
-                    <input type="text" placeholder="Father name">
+                    <input type="text" placeholder="Father name" id="fathername">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Email" id="email">
                 </div>
                 <div class="form-group">
                     <label>Phone</label>
-                    <input type="text" placeholder="Phone">
+                    <input type="text" placeholder="Phone" id="phone">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group">
                     <label>CNIC</label>
-                    <input type="text" placeholder="CNIC">
+                    <input type="text" placeholder="CNIC" id="cnic">
                 </div>
                 <div class="form-group">
                     <label>Father's CNIC (optional)</label>
-                    <input type="text" placeholder="Father's CNIC (optional)">
+                    <input type="text" placeholder="Father's CNIC (optional)" id="fathercnic">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group">
                     <label>Date of birth</label>
-                    <input type="date">
+                    <input type="date" id="dob">
                 </div>
                 <div class="form-group">
                     <label>Select gender</label>
-                    <select>
+                    <select id="gender">
                         <option>Select gender</option>
                         <option>Male</option>
                         <option>Female</option>
@@ -111,13 +109,13 @@
             <div class="form-row">
                 <div class="form-group">
                     <label>Address</label>
-                    <input type="text" placeholder="Address">
+                    <input type="text" placeholder="Address" id="address">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group">
                     <label>Last qualification</label>
-                    <select>
+                    <select id="qualification">
                         <option>Last qualification</option>
                         <option>Matric</option>
                         <option>Inter</option>
@@ -129,7 +127,7 @@
                 </div>
                 <div class="form-group">
                     <label>Do you have a Laptop?</label>
-                    <select>
+                    <select id="laptop">
                         <option>Do you have a Laptop?</option>
                         <option>Yes</option>
                         <option>No</option>
@@ -139,47 +137,14 @@
             <div class="form-row" style="margin-bottom: 18px;">
                 <div class="form-group">
                     <label>Picture</label>
-                    <input type="file">
+                    <input type="file" id="fileInput">
                 </div>
             </div>
-            <div class="instructions" style="font-size: 12px; color: #555; margin-bottom: 10px; margin-top: 18px;">
-                <ol style="padding-left: 18px;">
-                    <li>I hereby, solemnly declare that the data and facts mentioned herein are true and correct to the best of my knowledge. Further, I will abide by all the established and future regulations and policies of SMIT.</li>
-                    <li>I hereby accept the responsibilities of good conduct and guarantee that I will not be involved in any other activity, political or otherwise, but learning during my stay in the program.</li>
-                    <li>Defiance will render my admission canceled at any point in time.</li>
-                    <li>Upon completion, of the course, I will complete the required project by SMIT.</li>
-                    <li>It is mandatory for female students to wear abaya/hijab in the class.</li>
-                </ol>
-            </div>
-            <button type="submit">SUBMIT</button>
+            <button type="submit" id="btn">SUBMIT</button>
         </form>
     </div>
-    <script>
-        function updateCities() {
-            const country = document.getElementById('country').value;
-            const citySelect = document.getElementById('city');
-            let cities = [];
-            if (country === 'Pakistan') {
-                cities = ['Karachi', 'Lahore', 'Islamabad', 'Kashmir', 'Hyderabad', 'Multan', 'Quetta', 'Balochistan', 'Panjab'];
-            } else if (country === 'India') {
-                cities = ['Mumbai', 'Uttarkand', 'New Delhi', 'Bangalore', 'Pune', 'Chennai', 'Ahmedabad'];
-            } else if (country === 'Bangladesh') {
-                cities = ['Chittagong', 'Rajshahi', 'Bogra', 'Tangail', 'Jamalpur', 'Dhaka'];
-            } else if (country === 'Afghanistan') {
-                cities = ['Kabul', 'Herat', 'Jalalabad', 'Kandahar', 'Mazar-i-Sharif'];
-            } else if (country === 'United States') {
-                cities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia'];
-            } else if (country === 'Turkey') {
-                cities = ['Istanbul', 'Ankara', 'Izmir', 'Bursa', 'Adana', 'Gaziantep'];
-            }
-            citySelect.innerHTML = '<option value="">Select your city</option>';
-            cities.forEach(function(city) {
-                const option = document.createElement('option');
-                option.value = city;
-                option.textContent = city;
-                citySelect.appendChild(option);
-            });
-        }
-    </script>
+    <script src="firebase.js" type="module"></script>
+<script src="app.js" type="module"></script>
+
 </body>
 </html>
