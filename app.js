@@ -1,7 +1,5 @@
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-storage.js";
 import { db } from "./firebase.js";
-
 
 
 const fullname = document.getElementById('fullname');
@@ -20,57 +18,44 @@ const qualification = document.getElementById('qualification');
 const laptop = document.getElementById('laptop');
 const address = document.getElementById("address");
 const btn = document.getElementById('btn');
-const fileInput = document.getElementById('fileInput');
-
 
 
 
 btn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    const file = fileInput.files[0];
-    if (!file) {
-        alert("Please upload a picture.");
-        return;
-    }
+    const data = {
+        fullname: fullname.value,
+        fathername: fathername.value,
+        email: email.value,
+        phone: phone.value,
+        cnic: cnic.value,
+        fathercnic: fathercnic.value,
+        dob: dob.value,
+        country: country.value,
+        city: city.value,
+        course: course.value,
+        proficiency: proficiency.value,
+        gender: gender.value,
+        qualification: qualification.value,
+        laptop: laptop.value,
+        address: address.value,
+        // timestamp: new Date().toISOString()
+    };
 
-    const storage = getStorage();
-    const storageRef = ref(storage, `images/${Date.now()}_${file.name}`);
+    console.log('Submitting data:', data); 
 
-    uploadBytes(storageRef, file)
-        .then((snapshot) => getDownloadURL(snapshot.ref))
-        .then((downloadURL) => {
-            const data = {
-                fullname: fullname.value,
-                fathername: fathername.value,
-                email: email.value,
-                phone: phone.value,
-                cnic: cnic.value,
-                fathercnic: fathercnic.value,
-                dob: dob.value,
-                country: country.value,
-                city: city.value,
-                course: course.value,
-                proficiency: proficiency.value,
-                gender: gender.value,
-                qualification: qualification.value,
-                laptop: laptop.value,
-                address: address.value,
-                imageURL: downloadURL
-            };
-
-            return addDoc(collection(db, "todos"), data);
-        })
+    addDoc(collection(db, "registrations"), data)
         .then((docRef) => {
             alert("Form submitted successfully!");
             console.log("Document ID:", docRef.id);
+            e.target.form.reset();
         })
         .catch((err) => {
             console.error("Error submitting form:", err);
+            alert("Error submitting form. Please try again.");
         });
 });
-
-
 
 country.addEventListener('change', updateCities);
 
