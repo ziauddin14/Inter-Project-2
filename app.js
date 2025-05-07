@@ -1,4 +1,4 @@
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js"; 
 import { db } from "./firebase.js";
 
 
@@ -40,9 +40,8 @@ btn.addEventListener('click', (e) => {
         qualification: qualification.value,
         laptop: laptop.value,
         address: address.value,
-        // timestamp: new Date().toISOString()
-    };
-
+    }; 
+ 
     console.log('Submitting data:', data); 
 
     addDoc(collection(db, "registrations"), data)
